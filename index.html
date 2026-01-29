@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW LION SKA | Presskit Oficial</title>
+    <meta name="description" content="Presskit oficial de New Lion Ska. Tradición, Calle y Poder desde Monterrey, México.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Oswald:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN for standalone file) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nls: {
+                            black: '#0A0A0A',
+                            gold: '#D4AF37',
+                            goldlight: '#F4D03F',
+                            white: '#F2F2E9',
+                            red: '#B11217',
+                            gray: '#2A2A2A',
+                            darkgray: '#151515'
+                        }
+                    },
+                    fontFamily: {
+                        gothic: ['"Pirata One"', 'cursive'],
+                        oswald: ['"Oswald"', 'sans-serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'checker': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0ibm9uZSI+PHBhdGggZmlsbD0iIzE1MTUxNSIgZD0iTTAgMGgxMHYxMEgwem0xMCAxMGgxMHYxMEgxMHoiLz48L3N2Zz4=')",
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-gold': 'pulse-gold 2s infinite',
+                        'spin-slow': 'spin 12s linear infinite',
+                        'electric-flow': 'electricFlow 2s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        'pulse-gold': {
+                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(212, 175, 55, 0.4)' },
+                            '70%': { boxShadow: '0 0 0 10px rgba(212, 175, 55, 0)' },
+                        },
+                        electricFlow: {
+                            '0%': { backgroundPosition: '0% 0%' },
+                            '100%': { backgroundPosition: '0% 200%' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A2A2A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37;
+        }
+
+        /* Utility Classes */
+        .text-shadow-gold {
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+        .text-outline {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.1);
+            color: transparent;
+        }
+        .clip-diagonal {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .clip-diagonal-reverse {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        /* Reveal Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Texture Overlay */
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyBAMAAADsEZWCAAAAGFBMVEUAAAA5OTkAAABMTExERERmZmYzMzMyMjJ4D30DAAAAB3RSTlMABDQzMzMzM7A4RQAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfmAg0MFy244W4AAAABYktHRACIBR1IAAAAB3RSTlMABDQzMzMzM7A4RQAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+YCDQwXLbjhbgAAABhJREFUOMtjYBjWgBEIGBxhQACAkw4GZQAAKmAAhX2xZJAAAAAASUVORK5CYII=');
+            opacity: 0.03;
+            z-index: 50;
+        }
+
+        /* Tab Animations */
+        .tab-content {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .tab-content.active {
+            display: block;
+            opacity: 1;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Glass Effect */
+        .glass-panel {
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Electric Line Effect */
+        .electric-line-bg {
+            background: linear-gradient(to bottom, #D4AF37 0%, #FFF 50%, #D4AF37 100%);
+            background-size: 100% 50%;
+        }
+    </style>
+</head>
+<body class="bg-nls-black text-nls-white font-sans antialiased selection:bg-nls-gold selection:text-nls-black overflow-x-hidden">
+
+    <!-- Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-nls-black/90 backdrop-blur-md border-b border-white/5" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-gothic text-nls-gold tracking-widest hover:text-white transition-colors">
+                NEW LION <span class="text-white">SKA</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-oswald tracking-widest uppercase">
+                <a href="#novedades" class="hover:text-nls-gold transition-colors">Novedades</a>
+                <a href="#bio" class="hover:text-nls-gold transition-colors">Bio</a>
+                <a href="#historia-timeline" class="hover:text-nls-gold transition-colors">Historia</a>
+                <a href="#musica" class="hover:text-nls-gold transition-colors">Música</a>
+                <a href="#tour" class="hover:text-nls-gold transition-colors">Tour</a>
+                <a href="#contacto" class="px-4 py-2 border border-nls-gold text-nls-gold hover:bg-nls-gold hover:text-nls-black transition-all font-bold">Contratación</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white hover:text-nls-gold" onclick="toggleMenu()">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-nls-black border-b border-nls-gold/20 py-6 flex flex-col items-center space-y-4 font-oswald uppercase tracking-widest md:hidden">
+            <a href="#novedades" onclick="toggleMenu()">Novedades</a>
+            <a href="#bio" onclick="toggleMenu()">Bio</a>
+            <a href="#historia-timeline" onclick="toggleMenu()">Historia</a>
+            <a href="#musica" onclick="toggleMenu()">Música</a>
+            <a href="#tour" onclick="toggleMenu()">Tour</a>
+            <a href="#contacto" onclick="toggleMenu()" class="text-nls-gold">Contratación</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-20 pt-32">
+        <!-- Background Image with Parallax -->
+        <div class="absolute inset-0 z-0 bg-nls-darkgray clip-diagonal">
+            <!-- Placeholder for Band Photo (Urban/Walking) -->
+            <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=2070&auto=format&fit=crop" alt="New Lion Ska Urban Background" class="w-full h-full object-cover opacity-30 grayscale mix-blend-luminosity scale-110" id="hero-bg">
+            <div class="absolute inset-0 bg-gradient-to-t from-nls-black via-nls-black/60 to-transparent"></div>
+        </div>
+
+        <!-- Floating Particles (Simulated) -->
+        <div class="absolute inset-0 z-10 pointer-events-none opacity-30 bg-checker bg-[length:20px_20px] clip-diagonal"></div>
+
+        <!-- Content -->
+        <div class="relative z-20 text-center px-4 max-w-6xl mx-auto flex flex-col items-center">
+            <!-- Animated Lion/Logo Placeholder -->
+            <div class="mb-4 flex justify-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-nls-gold blur-3xl opacity-20 animate-pulse-gold rounded-full"></div>
+                    <i data-lucide="crown" class="w-20 h-20 md:w-24 md:h-24 text-nls-gold mx-auto mb-4 animate-float"></i>
+                </div>
+            </div>
+
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-gothic text-white leading-none tracking-tight mb-2 reveal active">
+                NEW LION <span class="text-nls-gold text-shadow-gold">SKA</span>
+            </h1>
+            <p class="text-xl md:text-3xl font-oswald text-gray-400 tracking-[0.2em] mb-8 border-y border-white/10 py-4 inline-block reveal active" style="transition-delay: 100ms;">
+                ELEGANCIA • BARRIO • SKA
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12 reveal active" style="transition-delay: 200ms;">
+                <a href="#contacto" class="group relative px-8 py-4 bg-nls-red text-white font-oswald font-bold uppercase tracking-widest overflow-hidden min-w-[200px]">
+                    <span class="relative z-10 flex items-center justify-center gap-2">Contratación <i data-lucide="mic-2" class="w-4 h-4"></i></span>
+                    <div class="absolute inset-0 bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 mix-blend-overlay"></div>
+                </a>
+                <a href="#musica" class="group px-8 py-4 border border-white/20 hover:border-nls-gold text-white hover:text-nls-gold font-oswald uppercase tracking-widest transition-all min-w-[200px]">
+                    <span class="flex items-center justify-center gap-2">Escuchar Música <i data-lucide="play" class="w-4 h-4"></i></span>
+                </a>
+            </div>
+
+            <!-- FICHA RÁPIDA (Hero Info Box) -->
+            <div class="w-full max-w-4xl glass-panel p-6 rounded-sm border-t-2 border-nls-gold reveal active mt-4 mb-8" style="transition-delay: 400ms;">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+                    <div class="border-l border-nls-gold/30 pl-3">
+                        <span class="block text-xs text-gray-400 uppercase tracking-widest mb-1">Origen</span>
+                        <strong class="text-white font-oswald text-lg">Monterrey, MX</strong>
+                    </div>
+                    <div class="border-l border-nls-gold/30 pl-3">
+                        <span class="block text-xs text-gray-400 uppercase tracking-widest mb-1">Género</span>
+                        <strong class="text-white font-oswald text-lg">Ska Tradicional</strong>
+                    </div>
+                    <div class="border-l border-nls-gold/30 pl-3">
+                        <span class="block text-xs text-gray-400 uppercase tracking-widest mb-1">Siguiente Show</span>
+                        <strong class="text-nls-red font-oswald text-lg">27 FEB 2026</strong>
+                    </div>
+                    <div class="border-l border-nls-gold/30 pl-3">
+                        <span class="block text-xs text-gray-400 uppercase tracking-widest mb-1">Streaming</span>
+                        <strong class="text-nls-gold font-oswald text-lg">4.4K+ Oyentes</strong>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 animate-bounce text-nls-gold z-30">
+            <i data-lucide="chevrons-down" class="w-8 h-8"></i>
+        </div>
+    </header>
+
+    <!-- NOVEDADES / ACTUALIDAD -->
+    <section id="novedades" class="py-24 bg-nls-black relative">
+        <div class="container mx-auto px-6">
+            <div class="flex items-end justify-between mb-16 border-b border-nls-gray pb-4">
+                <h2 class="text-5xl md:text-7xl font-gothic text-white">LO <span class="text-nls-red">NUEVO</span></h2>
+                <span class="hidden md:block text-nls-gold font-oswald tracking-widest">ACTUALIDAD 2025/2026</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Single Locos -->
+                <div class="group bg-nls-gray border border-white/5 hover:border-nls-gold transition-all duration-500 overflow-hidden reveal">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1514525253440-b393452e8d26?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter grayscale group-hover:grayscale-0">
+                        <div class="absolute top-4 left-4 bg-nls-gold text-nls-black font-bold font-oswald px-3 py-1 text-sm">NUEVO SINGLE</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-oswald text-white mb-2 group-hover:text-nls-gold transition-colors">LOCOS</h3>
+                        <p class="text-gray-400 font-sans text-sm mb-6">Julio 2025 • Disponible en todas las plataformas.</p>
+                        <a href="https://open.spotify.com/artist/6wlAS7ETMMuzJiwEIHzFII" target="_blank" class="inline-flex items-center text-sm font-bold text-nls-red hover:text-white transition-colors uppercase tracking-widest">
+                            Escuchar Ahora <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Single No Eres Para Mi -->
+                <div class="group bg-nls-gray border border-white/5 hover:border-nls-gold transition-all duration-500 overflow-hidden reveal" style="transition-delay: 100ms;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter grayscale group-hover:grayscale-0">
+                        <div class="absolute top-4 left-4 bg-nls-gold text-nls-black font-bold font-oswald px-3 py-1 text-sm">NUEVO SINGLE</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-oswald text-white mb-2 group-hover:text-nls-gold transition-colors">NO ERES PARA MI</h3>
+                        <p class="text-gray-400 font-sans text-sm mb-6">Octubre 2025 • Ska tradicional con el poder de los metales.</p>
+                        <a href="https://open.spotify.com/artist/6wlAS7ETMMuzJiwEIHzFII" target="_blank" class="inline-flex items-center text-sm font-bold text-nls-red hover:text-white transition-colors uppercase tracking-widest">
+                            Escuchar Ahora <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Next Event -->
+                <div class="group bg-nls-black border border-nls-red hover:shadow-[0_0_30px_rgba(177,18,23,0.3)] transition-all duration-500 overflow-hidden reveal" style="transition-delay: 200ms;">
+                    <div class="h-full p-8 flex flex-col justify-center items-center text-center relative">
+                        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-50"></div>
+                        <div class="relative z-10">
+                            <span class="text-nls-gold font-gothic text-2xl mb-2 block">PRÓXIMA FECHA</span>
+                            <div class="text-5xl font-oswald text-white font-bold mb-1">27</div>
+                            <div class="text-3xl font-oswald text-nls-red mb-4">FEB 2026</div>
+                            <h3 class="text-xl font-sans font-bold mb-2">LA TUMBA</h3>
+                            <p class="text-gray-500 text-sm mb-6 uppercase tracking-widest">Monterrey, Nuevo León</p>
+                            <a href="https://www.passline.com/eventos/staya-staya-mexico-tour" target="_blank" class="px-6 py-3 bg-white text-nls-black hover:bg-nls-gold font-bold font-oswald uppercase transition-colors inline-block w-full">
+                                Comprar Boletos
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIO / HISTORIA (CON TABS) -->
+    <section id="bio" class="py-24 bg-nls-darkgray clip-diagonal relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute right-0 top-0 w-1/3 h-full bg-nls-black opacity-50 transform skew-x-12 translate-x-20"></div>
+        <div class="absolute left-10 bottom-10 text-[20rem] font-gothic text-white opacity-[0.02] leading-none pointer-events-none select-none">LION</div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-start gap-16">
+                <!-- Text Content Wrapper -->
+                <div class="lg:w-1/2 reveal">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="h-[2px] w-12 bg-nls-gold"></div>
+                        <h2 class="text-xl font-oswald text-nls-gold tracking-[0.3em]">LA HISTORIA</h2>
+                    </div>
+                    <h3 class="text-5xl md:text-6xl font-gothic text-white mb-8 leading-tight">
+                        ORGULLO REGIO.<br>
+                        <span class="text-outline">ESCENA VIVA.</span>
+                    </h3>
+
+                    <!-- TABS CONTROLLER -->
+                    <div class="flex gap-4 mb-8 border-b border-white/10">
+                        <button onclick="switchTab('short')" id="tab-short" class="pb-3 text-sm font-oswald tracking-widest uppercase border-b-2 border-nls-gold text-white transition-colors">
+                            Historia Breve
+                        </button>
+                        <button onclick="switchTab('long')" id="tab-long" class="pb-3 text-sm font-oswald tracking-widest uppercase border-b-2 border-transparent text-gray-500 hover:text-white transition-colors">
+                            Bio Prensa / Larga
+                        </button>
+                    </div>
+
+                    <!-- TAB CONTENT: SHORT -->
+                    <div id="content-short" class="tab-content active">
+                        <p class="text-gray-300 font-sans text-lg leading-relaxed mb-6">
+                            <strong class="text-white">New Lion Ska</strong> es una fuerza imparable de ska tradicional originaria de Monterrey. Nacidos entre el calor del asfalto y la majestuosidad de las montañas, hemos forjado una identidad que mezcla la elegancia del <span class="text-nls-gold">Two Tone</span> con la bravura del norte de México.
+                        </p>
+                        <p class="text-gray-400 font-sans leading-relaxed mb-8">
+                            Reconocidos por nuestra potencia en metales (saxo, trombón, trompeta) y una energía en vivo que domina desde festivales masivos hasta los venues más underground. Somos la banda que respeta la raíz, pero ruge con voz propia.
+                        </p>
+                    </div>
+
+                    <!-- TAB CONTENT: LONG (From Prompt) -->
+                    <div id="content-long" class="tab-content">
+                        <div class="h-80 overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-nls-gold scrollbar-track-nls-black">
+                            <p class="text-gray-300 font-sans leading-relaxed mb-4">
+                                Desde Monterrey, <strong class="text-white">New Lion Ska</strong> ha desarrollado una identidad centrada en el ska tradicional, con arreglos donde los metales juegan un papel protagonista y una vibra de fiesta que se sostiene tanto en el groove como en el canto. Medios locales han destacado su propuesta y el trabajo instrumental dentro de la escena regiomontana.
+                            </p>
+                            <p class="text-gray-400 font-sans leading-relaxed mb-4">
+                                En su catálogo aparecen temas que se volvieron referencia para su público —por ejemplo “Ya No Vale la Pena”— y producciones que marcan etapas claras como el álbum “It’s Ska Time” (2011) y “Santa Cecilia”. La banda también registra participaciones en el circuito de festivales y foros: en 2014 fueron parte del marco de actividades musicales de Nuevo León dentro del Festival Internacional Santa Lucía (“Nuevo León Suena”) y aparecen en carteles y eventos clave del entorno regio.
+                            </p>
+                            <p class="text-gray-400 font-sans leading-relaxed">
+                                En años recientes han mantenido movimiento con lanzamientos y presentaciones: participaron como invitados en Ska Wars Festival (Foro Tims, CDMX, 2025) y tienen fecha anunciada para 27 de febrero de 2026 en La Tumba (Monterrey). Han celebrado su 21 aniversario consolidando una carrera de resistencia y pasión por el ritmo jamaiquino hecho en el norte.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Stats / Highlights with Counters -->
+                    <div class="grid grid-cols-3 gap-4 border-t border-white/10 pt-8" id="stats-container">
+                        <div class="text-center">
+                            <span class="block text-3xl font-oswald text-nls-gold font-bold counter" data-target="21">0</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">Aniversario</span>
+                        </div>
+                        <div class="text-center border-l border-white/10">
+                            <span class="block text-3xl font-oswald text-nls-gold font-bold counter" data-target="3">0</span>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">Álbumes</span>
+                        </div>
+                        <div class="text-center border-l border-white/10">
+                            <div class="flex items-center justify-center gap-1 text-nls-gold">
+                                <span class="text-3xl font-oswald font-bold counter" data-target="4400">0</span>
+                                <span class="text-xl font-bold">+</span>
+                            </div>
+                            <span class="text-xs text-gray-500 uppercase tracking-widest">Oyentes Spotify</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Composition -->
+                <div class="lg:w-1/2 relative reveal mt-8 lg:mt-0" style="transition-delay: 200ms;">
+                    <div class="relative z-10 border-2 border-nls-gold p-2 bg-nls-black/50 backdrop-blur-sm">
+                        <!-- Placeholder for Sax/Trombone artistic shot -->
+                        <img src="https://images.unsplash.com/photo-1415201364774-f6f0bb35f28f?q=80&w=2070&auto=format&fit=crop" alt="Metales New Lion Ska" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-700">
+                    </div>
+                    <!-- Decorative back elements -->
+                    <div class="absolute -top-4 -right-4 w-full h-full border border-nls-gray -z-10"></div>
+                    <div class="absolute -bottom-8 -left-8 w-32 h-32 bg-checker opacity-20 z-0"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALINEACIÓN HISTÓRICA -->
+    <section id="alineacion" class="py-24 bg-nls-black relative border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl md:text-7xl font-gothic text-white text-center mb-16 reveal">ALINEACIÓN <span class="text-nls-gold">HISTÓRICA</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Member 1: Mayela -->
+                <div class="group relative h-96 overflow-hidden border border-white/10 hover:border-nls-gold transition-all duration-500 reveal">
+                    <img src="img/INT1.jpg" alt="Mayela" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" onerror="this.src='https://via.placeholder.com/400x600/111/D4AF37?text=MAYELA'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-nls-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="w-12 h-1 bg-nls-gold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <h3 class="text-3xl font-gothic text-white group-hover:text-nls-gold transition-colors">MAYELA</h3>
+                        <p class="text-sm font-oswald text-gray-400 uppercase tracking-widest">Voz y Sax</p>
+                    </div>
+                </div>
+
+                <!-- Member 2: Manolo -->
+                <div class="group relative h-96 overflow-hidden border border-white/10 hover:border-nls-gold transition-all duration-500 reveal" style="transition-delay: 100ms;">
+                    <img src="img/INT2.jpg" alt="Manolo El León" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" onerror="this.src='https://via.placeholder.com/400x600/111/D4AF37?text=MANOLO'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-nls-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="w-12 h-1 bg-nls-gold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <h3 class="text-3xl font-gothic text-white group-hover:text-nls-gold transition-colors">MANOLO “EL LEÓN”</h3>
+                        <p class="text-sm font-oswald text-gray-400 uppercase tracking-widest">Voz y Trombón</p>
+                    </div>
+                </div>
+
+                <!-- Member 3: Gera -->
+                <div class="group relative h-96 overflow-hidden border border-white/10 hover:border-nls-gold transition-all duration-500 reveal" style="transition-delay: 200ms;">
+                    <img src="img/INT3.jpg" alt="Gera" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" onerror="this.src='https://via.placeholder.com/400x600/111/D4AF37?text=GERA'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-nls-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="w-12 h-1 bg-nls-gold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <h3 class="text-3xl font-gothic text-white group-hover:text-nls-gold transition-colors">GERA</h3>
+                        <p class="text-sm font-oswald text-gray-400 uppercase tracking-widest">Guitarra</p>
+                    </div>
+                </div>
+
+                <!-- Member 4: Sergio -->
+                <div class="group relative h-96 overflow-hidden border border-white/10 hover:border-nls-gold transition-all duration-500 reveal">
+                    <img src="img/INT4.jpg" alt="Sergio" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" onerror="this.src='https://via.placeholder.com/400x600/111/D4AF37?text=SERGIO'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-nls-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="w-12 h-1 bg-nls-gold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <h3 class="text-3xl font-gothic text-white group-hover:text-nls-gold transition-colors">SERGIO</h3>
+                        <p class="text-sm font-oswald text-gray-400 uppercase tracking-widest">Trompeta</p>
+                    </div>
+                </div>
+
+                <!-- Member 5: Jim -->
+                <div class="group relative h-96 overflow-hidden border border-white/10 hover:border-nls-gold transition-all duration-500 reveal" style="transition-delay: 100ms;">
+                    <img src="img/INT5.jpg" alt="Jim" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" onerror="this.src='https://via.placeholder.com/400x600/111/D4AF37?text=JIM'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-nls-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="w-12 h-1 bg-nls-gold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <h3 class="text-3xl font-gothic text-white group-hover:text-nls-gold transition-colors">JIM</h3>
+                        <p class="text-sm font-oswald text-gray-400 uppercase tracking-widest">Batería</p>
+                    </div>
+                </div>
+
+                <!-- Member 6: Ángel -->
+                <div class="group relative h-96 overflow-hidden border border-white/10 hover:border-nls-gold transition-all duration-500 reveal" style="transition-delay: 200ms;">
+                    <img src="img/INT6.jpg" alt="Ángel" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" onerror="this.src='https://via.placeholder.com/400x600/111/D4AF37?text=ANGEL'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-nls-black via-transparent to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 w-full p-6 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <div class="w-12 h-1 bg-nls-gold mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <h3 class="text-3xl font-gothic text-white group-hover:text-nls-gold transition-colors">ÁNGEL</h3>
+                        <p class="text-sm font-oswald text-gray-400 uppercase tracking-widest">Teclado y Sax Tenor</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LÍNEA DE TIEMPO -->
+    <section id="historia-timeline" class="py-24 bg-nls-darkgray relative overflow-hidden border-t border-white/5">
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-black to-transparent z-0"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <h2 class="text-5xl md:text-7xl font-gothic text-white text-center mb-20 reveal">CRONOLOGÍA DEL <span class="text-nls-gold">RUGIDO</span></h2>
+
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Línea Central -->
+                <div class="absolute left-6 md:left-1/2 top-0 bottom-0 w-[2px] bg-white/10 -translate-x-1/2">
+                    <!-- Efecto Eléctrico Dorado -->
+                    <div class="absolute inset-0 electric-line-bg animate-electric-flow opacity-80 shadow-[0_0_15px_#D4AF37]"></div>
+                </div>
+
+                <!-- 2005 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 md:text-right pl-12 md:pl-0 md:pr-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-gold mb-1">2005</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">EL INICIO</h4>
+                        <p class="text-gray-400 font-sans text-sm">Nace "La New Lion Ska". La banda comienza a activarse en la escena local de Monterrey.</p>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-nls-black border-2 border-nls-gold shadow-[0_0_10px_#D4AF37] z-20 group-hover:scale-150 transition-transform duration-300"></div>
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                </div>
+
+                <!-- 2005-2007 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-nls-black border-2 border-nls-gold shadow-[0_0_10px_#D4AF37] z-20 group-hover:scale-150 transition-transform duration-300"></div>
+                    <div class="order-1 w-full md:w-5/12 pl-12 md:pl-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-gold mb-1">2005-2007</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">ETAPA MAQUETAS</h4>
+                        <p class="text-gray-400 font-sans text-sm">Circulación de demos y fuerte difusión digital en la era MySpace.</p>
+                    </div>
+                </div>
+
+                <!-- 2009 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 md:text-right pl-12 md:pl-0 md:pr-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-gold mb-1">2009</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">BAR RIVIERA</h4>
+                        <p class="text-gray-400 font-sans text-sm">Presentación clave en el aniversario de Espantosas X. Temas como "La Playa" comienzan a sonar fuerte.</p>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-nls-black border-2 border-nls-gold shadow-[0_0_10px_#D4AF37] z-20 group-hover:scale-150 transition-transform duration-300"></div>
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                </div>
+
+                <!-- 2011 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-nls-black border-2 border-nls-gold shadow-[0_0_10px_#D4AF37] z-20 group-hover:scale-150 transition-transform duration-300"></div>
+                    <div class="order-1 w-full md:w-5/12 pl-12 md:pl-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-gold mb-1">2011</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">IT'S SKA TIME</h4>
+                        <p class="text-gray-400 font-sans text-sm">Lanzamiento del primer álbum oficial (12 tracks) y participación en la 1ª edición del Machaca Fest.</p>
+                    </div>
+                </div>
+
+                <!-- 2014 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 md:text-right pl-12 md:pl-0 md:pr-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-gold mb-1">2014</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">DIME YA</h4>
+                        <p class="text-gray-400 font-sans text-sm">Estreno del video oficial y participación en el compilado Ska Wars Monterrey.</p>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-nls-black border-2 border-nls-gold shadow-[0_0_10px_#D4AF37] z-20 group-hover:scale-150 transition-transform duration-300"></div>
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                </div>
+
+                <!-- 2015 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-nls-black border-2 border-nls-gold shadow-[0_0_10px_#D4AF37] z-20 group-hover:scale-150 transition-transform duration-300"></div>
+                    <div class="order-1 w-full md:w-5/12 pl-12 md:pl-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-gold mb-1">2015</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">SANTA CECILIA</h4>
+                        <p class="text-gray-400 font-sans text-sm">Segunda etapa creativa. Comparten escenario con leyendas como The Skatalites y The Toasters.</p>
+                    </div>
+                </div>
+
+                <!-- 2022-2023 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 md:text-right pl-12 md:pl-0 md:pr-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-gold mb-1">2022-2023</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">COLABORACIONES</h4>
+                        <p class="text-gray-400 font-sans text-sm">Lanzamiento de "Amor Tóxico" y participación en "Tey Cypher: Ska".</p>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-nls-black border-2 border-nls-gold shadow-[0_0_10px_#D4AF37] z-20 group-hover:scale-150 transition-transform duration-300"></div>
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-nls-black border-2 border-nls-gold shadow-[0_0_10px_#D4AF37] z-20 group-hover:scale-150 transition-transform duration-300"></div>
+                    <div class="order-1 w-full md:w-5/12 pl-12 md:pl-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-gold mb-1">2024</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">RELANZAMIENTO</h4>
+                        <p class="text-gray-400 font-sans text-sm">Salida de "Ole le Ola la" y show en Poniente Caliente Fest.</p>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 md:text-right pl-12 md:pl-0 md:pr-16 relative">
+                        <h3 class="text-4xl font-gothic text-nls-red mb-1">2025</h3>
+                        <h4 class="text-xl font-oswald text-white mb-2">21 ANIVERSARIO</h4>
+                        <p class="text-gray-400 font-sans text-sm">Regio Mini Tour. Nuevos singles "LOCOS" y "NO ERES PARA MI".</p>
+                    </div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-nls-red border-2 border-white shadow-[0_0_15px_#B11217] z-20 group-hover:scale-125 transition-transform duration-300 animate-pulse"></div>
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                </div>
+
+                <!-- 2026 -->
+                <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
+                    <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-nls-gold border-2 border-white shadow-[0_0_20px_#D4AF37] z-20 animate-bounce"></div>
+                    <div class="order-1 w-full md:w-5/12 pl-12 md:pl-16 relative">
+                        <div class="inline-block bg-nls-gold text-nls-black font-bold px-2 py-1 text-xs mb-2 rounded-sm">PRÓXIMAMENTE</div>
+                        <h3 class="text-4xl font-gothic text-white mb-1">2026</h3>
+                        <h4 class="text-xl font-oswald text-nls-gold mb-2">LA TUMBA</h4>
+                        <p class="text-gray-400 font-sans text-sm">27 de Febrero. Inicio de temporada en Monterrey.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MÚSICA / DISCOGRAFÍA -->
+    <section id="musica" class="py-24 bg-nls-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-5xl md:text-7xl font-gothic text-white text-center mb-16">DISCOGRAFÍA <span class="text-nls-gold">OFICIAL</span></h2>
+
+            <!-- Albums Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <!-- Album 1 -->
+                <div class="group relative aspect-square bg-nls-gray reveal">
+                    <img src="https://via.placeholder.com/400x400/111111/D4AF37?text=IT%27S+SKA+TIME" alt="It's Ska Time" class="w-full h-full object-cover opacity-80 group-hover:opacity-40 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-oswald text-xl text-white mb-1">IT'S SKA TIME</h4>
+                        <span class="text-nls-gold text-sm mb-4">2011</span>
+                        <a href="https://open.spotify.com/artist/6wlAS7ETMMuzJiwEIHzFII" target="_blank" class="p-3 bg-nls-green-500 rounded-full text-white bg-[#1DB954] hover:scale-110 transition-transform">
+                            <i data-lucide="play" class="fill-current w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent md:hidden">
+                        <span class="text-white font-oswald">It's Ska Time</span>
+                    </div>
+                </div>
+
+                <!-- Album 2 -->
+                <div class="group relative aspect-square bg-nls-gray reveal" style="transition-delay: 100ms;">
+                    <img src="https://via.placeholder.com/400x400/111111/D4AF37?text=SANTA+CECILIA" alt="Santa Cecilia" class="w-full h-full object-cover opacity-80 group-hover:opacity-40 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-oswald text-xl text-white mb-1">SANTA CECILIA</h4>
+                        <span class="text-nls-gold text-sm mb-4">2015</span>
+                        <a href="https://open.spotify.com/artist/6wlAS7ETMMuzJiwEIHzFII" target="_blank" class="p-3 bg-nls-green-500 rounded-full text-white bg-[#1DB954] hover:scale-110 transition-transform">
+                            <i data-lucide="play" class="fill-current w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent md:hidden">
+                        <span class="text-white font-oswald">Santa Cecilia</span>
+                    </div>
+                </div>
+
+                <!-- Single 1 -->
+                <div class="group relative aspect-square bg-nls-gray reveal" style="transition-delay: 200ms;">
+                    <img src="https://via.placeholder.com/400x400/111111/B11217?text=LOCOS" alt="Locos" class="w-full h-full object-cover opacity-80 group-hover:opacity-40 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-oswald text-xl text-white mb-1">LOCOS</h4>
+                        <span class="text-nls-red text-sm font-bold mb-4">SINGLE 2025</span>
+                        <a href="https://open.spotify.com/artist/6wlAS7ETMMuzJiwEIHzFII" target="_blank" class="p-3 bg-nls-green-500 rounded-full text-white bg-[#1DB954] hover:scale-110 transition-transform">
+                            <i data-lucide="play" class="fill-current w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-nls-red text-white text-xs font-bold px-2 py-1">NEW</div>
+                </div>
+
+                <!-- Single 2 -->
+                <div class="group relative aspect-square bg-nls-gray reveal" style="transition-delay: 300ms;">
+                    <img src="https://via.placeholder.com/400x400/111111/B11217?text=NO+ERES+PARA+MI" alt="No Eres Para Mi" class="w-full h-full object-cover opacity-80 group-hover:opacity-40 transition-opacity">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-oswald text-xl text-white mb-1 text-center px-2">NO ERES PARA MI</h4>
+                        <span class="text-nls-red text-sm font-bold mb-4">SINGLE 2025</span>
+                        <a href="https://open.spotify.com/artist/6wlAS7ETMMuzJiwEIHzFII" target="_blank" class="p-3 bg-nls-green-500 rounded-full text-white bg-[#1DB954] hover:scale-110 transition-transform">
+                            <i data-lucide="play" class="fill-current w-5 h-5"></i>
+                        </a>
+                    </div>
+                    <div class="absolute top-2 right-2 bg-nls-red text-white text-xs font-bold px-2 py-1">NEW</div>
+                </div>
+            </div>
+
+            <!-- Streaming Links -->
+            <div class="flex flex-wrap justify-center gap-6 reveal">
+                <a href="https://open.spotify.com/artist/6wlAS7ETMMuzJiwEIHzFII" target="_blank" class="flex items-center gap-3 bg-[#191414] border border-white/10 hover:border-[#1DB954] px-6 py-3 rounded-full transition-all group">
+                    <i data-lucide="music-2" class="text-[#1DB954] group-hover:text-white transition-colors"></i> <span class="font-bold text-gray-300 group-hover:text-white">Spotify</span>
+                </a>
+                <a href="https://music.apple.com/us/artist/new-lion-ska/554444172" target="_blank" class="flex items-center gap-3 bg-[#191414] border border-white/10 hover:border-[#FC3C44] px-6 py-3 rounded-full transition-all group">
+                    <i data-lucide="music" class="text-[#FC3C44] group-hover:text-white transition-colors"></i> <span class="font-bold text-gray-300 group-hover:text-white">Apple Music</span>
+                </a>
+                <a href="https://music.amazon.com.mx/artists/B0B3CKFZ6T/new-lion-ska" target="_blank" class="flex items-center gap-3 bg-[#191414] border border-white/10 hover:border-[#00A8E1] px-6 py-3 rounded-full transition-all group">
+                    <i data-lucide="shopping-cart" class="text-[#00A8E1] group-hover:text-white transition-colors"></i> <span class="font-bold text-gray-300 group-hover:text-white">Amazon Music</span>
+                </a>
+                <a href="https://www.youtube.com/results?search_query=new+lion+ska" target="_blank" class="flex items-center gap-3 bg-[#191414] border border-white/10 hover:border-[#FF0000] px-6 py-3 rounded-full transition-all group">
+                    <i data-lucide="youtube" class="text-[#FF0000] group-hover:text-white transition-colors"></i> <span class="font-bold text-gray-300 group-hover:text-white">YouTube</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAYECTORIA / MAPA (TOUR) -->
+    <section id="tour" class="py-24 bg-nls-darkgray relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-nls-black to-transparent"></div>
+        
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row gap-12">
+            <!-- Left: Text List -->
+            <div class="lg:w-1/2 reveal">
+                <h2 class="text-5xl font-gothic text-white mb-2">ESCENARIOS</h2>
+                <h3 class="text-2xl font-oswald text-nls-gold mb-8">TRAYECTORIA & FESTIVALES</h3>
+                
+                <ul class="space-y-6">
+                    <li class="flex items-center gap-4 group cursor-default">
+                        <div class="w-12 h-12 bg-nls-black border border-nls-gold rounded-full flex items-center justify-center text-nls-gold group-hover:bg-nls-gold group-hover:text-nls-black transition-colors">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-white text-xl font-oswald">MACHACA FEST</strong>
+                            <span class="text-gray-500 text-sm">MONTERREY, NL</span>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-4 group cursor-default">
+                        <div class="w-12 h-12 bg-nls-black border border-nls-gold rounded-full flex items-center justify-center text-nls-gold group-hover:bg-nls-gold group-hover:text-nls-black transition-colors">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-white text-xl font-oswald">SKA WARS FESTIVAL</strong>
+                            <span class="text-gray-500 text-sm">CDMX (2025)</span>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-4 group cursor-default">
+                        <div class="w-12 h-12 bg-nls-black border border-nls-gold rounded-full flex items-center justify-center text-nls-gold group-hover:bg-nls-gold group-hover:text-nls-black transition-colors">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-white text-xl font-oswald">FESTIVAL SANTA LUCÍA</strong>
+                            <span class="text-gray-500 text-sm">MONTERREY, NL</span>
+                        </div>
+                    </li>
+                    <li class="flex items-center gap-4 group cursor-default">
+                        <div class="w-12 h-12 bg-nls-black border border-nls-gold rounded-full flex items-center justify-center text-nls-gold group-hover:bg-nls-gold group-hover:text-nls-black transition-colors">
+                            <i data-lucide="map-pin"></i>
+                        </div>
+                        <div>
+                            <strong class="block text-white text-xl font-oswald">CIRCUITO NACIONAL</strong>
+                            <span class="text-gray-500 text-sm">MÉXICO TOUR</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right: Colabs Grid -->
+            <div class="lg:w-1/2 reveal" style="transition-delay: 200ms;">
+                <h3 class="text-right text-2xl font-oswald text-nls-gold mb-8 uppercase">Colaboraciones & Amigos</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-nls-black p-4 border border-white/5 hover:border-nls-red transition-colors text-center">
+                        <span class="block text-white font-bold font-oswald text-lg">EL GRAN SILENCIO</span>
+                    </div>
+                    <div class="bg-nls-black p-4 border border-white/5 hover:border-nls-red transition-colors text-center">
+                        <span class="block text-white font-bold font-oswald text-lg">BIG JAVI</span>
+                    </div>
+                    <div class="bg-nls-black p-4 border border-white/5 hover:border-nls-red transition-colors text-center">
+                        <span class="block text-white font-bold font-oswald text-lg">MOTA</span>
+                    </div>
+                    <div class="bg-nls-black p-4 border border-white/5 hover:border-nls-red transition-colors text-center">
+                        <span class="block text-white font-bold font-oswald text-lg">PERICO</span>
+                    </div>
+                    <div class="bg-nls-black p-4 border border-white/5 hover:border-nls-red transition-colors text-center col-span-2">
+                        <span class="block text-white font-bold font-oswald text-lg">JESÚS "EL PADRINO" ARRIAGA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="py-24 bg-nls-black border-t border-white/5">
+        <div class="container mx-auto px-6 mb-12">
+            <h2 class="text-5xl font-gothic text-white mb-2">GALERÍA</h2>
+            <p class="text-gray-500 font-sans text-sm uppercase tracking-widest">En Vivo • Backstage • Promocional</p>
+        </div>
+
+        <!-- Horizontal Scroll Container -->
+        <div class="flex overflow-x-auto space-x-4 px-6 pb-8 scrollbar-hide snap-x">
+            <!-- Image 1 -->
+            <div class="flex-none w-80 md:w-96 aspect-[3/4] relative snap-center group overflow-hidden border border-white/10">
+                <img src="https://images.unsplash.com/photo-1501612780327-45045538702b?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="text-nls-gold font-oswald uppercase tracking-widest">En Vivo</span>
+                </div>
+            </div>
+            <!-- Image 2 -->
+            <div class="flex-none w-80 md:w-96 aspect-[3/4] relative snap-center group overflow-hidden border border-white/10">
+                <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="text-nls-gold font-oswald uppercase tracking-widest">Backstage</span>
+                </div>
+            </div>
+            <!-- Image 3 -->
+            <div class="flex-none w-80 md:w-96 aspect-[3/4] relative snap-center group overflow-hidden border border-white/10">
+                <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="text-nls-gold font-oswald uppercase tracking-widest">El Público</span>
+                </div>
+            </div>
+            <!-- Image 4 -->
+            <div class="flex-none w-80 md:w-96 aspect-[3/4] relative snap-center group overflow-hidden border border-white/10">
+                <img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?q=80&w=1000&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale hover:grayscale-0">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span class="text-nls-gold font-oswald uppercase tracking-widest">Festival</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOADS / ASSETS -->
+    <section class="py-16 bg-nls-gray border-y border-nls-gold/20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-2xl font-oswald text-white mb-8">PRESS ASSETS & DESCARGAS</h3>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#" class="flex items-center gap-3 px-6 py-4 bg-nls-black border border-white/10 hover:border-nls-gold transition-all text-white group">
+                    <i data-lucide="download" class="text-nls-gold group-hover:animate-bounce"></i>
+                    <div class="text-left">
+                        <span class="block font-bold font-oswald text-sm">LOGO PACK</span>
+                        <span class="text-xs text-gray-500">PNG, SVG, Vector</span>
+                    </div>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-6 py-4 bg-nls-black border border-white/10 hover:border-nls-gold transition-all text-white group">
+                    <i data-lucide="camera" class="text-nls-gold group-hover:animate-bounce"></i>
+                    <div class="text-left">
+                        <span class="block font-bold font-oswald text-sm">FOTOS HD</span>
+                        <span class="text-xs text-gray-500">Promocionales 2025</span>
+                    </div>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-6 py-4 bg-nls-black border border-white/10 hover:border-nls-gold transition-all text-white group">
+                    <i data-lucide="file-text" class="text-nls-gold group-hover:animate-bounce"></i>
+                    <div class="text-left">
+                        <span class="block font-bold font-oswald text-sm">RIDER TÉCNICO</span>
+                        <span class="text-xs text-gray-500">Stage Plot PDF</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTRATACIÓN & FOOTER -->
+    <section id="contacto" class="py-24 bg-nls-black relative">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="bg-nls-darkgray p-8 md:p-12 border border-white/10 relative overflow-hidden reveal">
+                <!-- Golden Corner Accent -->
+                <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-nls-gold to-transparent opacity-20"></div>
+
+                <h2 class="text-4xl md:text-5xl font-gothic text-white mb-2 text-center">CONTRATACIÓN</h2>
+                <p class="text-gray-400 text-center mb-10 font-sans">Lleva el poder del León a tu ciudad.</p>
+
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-nls-gold uppercase tracking-widest">Nombre / Promotor</label>
+                            <input type="text" class="w-full bg-nls-black border border-white/10 p-4 text-white focus:border-nls-gold focus:outline-none transition-colors" placeholder="Tu nombre">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-nls-gold uppercase tracking-widest">Email</label>
+                            <input type="email" class="w-full bg-nls-black border border-white/10 p-4 text-white focus:border-nls-gold focus:outline-none transition-colors" placeholder="contacto@email.com">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-nls-gold uppercase tracking-widest">Ciudad</label>
+                            <input type="text" class="w-full bg-nls-black border border-white/10 p-4 text-white focus:border-nls-gold focus:outline-none transition-colors" placeholder="Monterrey, CDMX...">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-nls-gold uppercase tracking-widest">Fecha Tentativa</label>
+                            <input type="text" class="w-full bg-nls-black border border-white/10 p-4 text-white focus:border-nls-gold focus:outline-none transition-colors" placeholder="DD/MM/AAAA">
+                        </div>
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold text-nls-gold uppercase tracking-widest">Detalles del Evento</label>
+                        <textarea class="w-full bg-nls-black border border-white/10 p-4 text-white focus:border-nls-gold focus:outline-none transition-colors h-32" placeholder="Cuéntanos más sobre el festival, aforo, venue..."></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full bg-nls-red text-white font-oswald font-bold text-xl py-4 hover:bg-white hover:text-nls-black transition-all uppercase tracking-widest shadow-[0_0_20px_rgba(177,18,23,0.4)] hover:shadow-none">
+                        🔥 Solicitar Cotización
+                    </button>
+                </form>
+
+                <!-- Social Footer inside Contact -->
+                <div class="mt-12 pt-8 border-t border-white/5 flex justify-center gap-8">
+                    <a href="https://www.facebook.com/NLSKA/" class="text-gray-400 hover:text-nls-gold transition-colors"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                    <a href="https://www.instagram.com/newlion.ska/" class="text-gray-400 hover:text-nls-gold transition-colors"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                    <a href="https://x.com/newlionska" class="text-gray-400 hover:text-nls-gold transition-colors"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                    <a href="https://open.spotify.com/artist/6wlAS7ETMMuzJiwEIHzFII" class="text-gray-400 hover:text-nls-gold transition-colors"><i data-lucide="music-2" class="w-6 h-6"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-nls-black py-8 text-center border-t border-white/5">
+        <p class="text-gray-600 text-xs font-sans mb-2">© 2026 NEW LION SKA. Todos los derechos reservados.</p>
+        <p class="text-[10px] text-gray-700 font-sans tracking-widest">PRESSKIT DESARROLLADO POR ROCK RESUENA®</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Tab Switching Logic
+        function switchTab(tab) {
+            // Buttons
+            document.getElementById('tab-short').classList.remove('border-nls-gold', 'text-white');
+            document.getElementById('tab-short').classList.add('border-transparent', 'text-gray-500');
+            
+            document.getElementById('tab-long').classList.remove('border-nls-gold', 'text-white');
+            document.getElementById('tab-long').classList.add('border-transparent', 'text-gray-500');
+
+            document.getElementById(`tab-${tab}`).classList.remove('border-transparent', 'text-gray-500');
+            document.getElementById(`tab-${tab}`).classList.add('border-nls-gold', 'text-white');
+
+            // Content
+            document.getElementById('content-short').classList.remove('active');
+            document.getElementById('content-long').classList.remove('active');
+            
+            // Add active class after a tiny delay for transition
+            setTimeout(() => {
+                document.getElementById(`content-${tab}`).classList.add('active');
+            }, 50);
+        }
+
+        // Count Up Animation
+        const runCounter = (el) => {
+            const target = +el.getAttribute('data-target');
+            const increment = target / 100; // Adjust speed here
+            
+            const updateCount = () => {
+                const count = +el.innerText.replace(/,/g, ''); // strip commas for calculation
+                if (count < target) {
+                    el.innerText = Math.ceil(count + increment).toLocaleString(); // Add commas back
+                    setTimeout(updateCount, 20);
+                } else {
+                    el.innerText = target.toLocaleString() + (target > 1000 ? "" : ""); // Final format check
+                }
+            };
+            updateCount();
+        };
+
+        // Scroll Reveal & Intersection Observer
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        
+                        // Check for counters inside the revealed section
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            if (!counter.classList.contains('counted')) {
+                                runCounter(counter);
+                                counter.classList.add('counted');
+                            }
+                        });
+                        
+                        // Optional: Stop observing once revealed
+                        // observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Navbar Scroll Effect
+            window.addEventListener('scroll', () => {
+                const nav = document.getElementById('navbar');
+                if (window.scrollY > 50) {
+                    nav.classList.add('bg-nls-black', 'shadow-lg');
+                    nav.classList.remove('bg-nls-black/90', 'backdrop-blur-md');
+                } else {
+                    nav.classList.remove('bg-nls-black', 'shadow-lg');
+                    nav.classList.add('bg-nls-black/90', 'backdrop-blur-md');
+                }
+            });
+
+            // Parallax Effect for Hero
+            window.addEventListener('scroll', () => {
+                const scrolled = window.scrollY;
+                const heroBg = document.getElementById('hero-bg');
+                if (heroBg) {
+                    heroBg.style.transform = `scale(1.1) translateY(${scrolled * 0.5}px)`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
