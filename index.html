@@ -598,7 +598,10 @@
                 <!-- 2026 -->
                 <div class="mb-12 flex flex-col md:flex-row items-center justify-between w-full group reveal">
                     <div class="order-1 w-full md:w-5/12 hidden md:block"></div>
-                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-nls-gold border-2 border-white shadow-[0_0_20px_#D4AF37] z-20 animate-bounce"></div>
+                    <!-- Wrapper para posicionamiento, círculo interno para animación -->
+                    <div class="absolute left-6 md:left-1/2 -translate-x-1/2 z-20">
+                        <div class="w-6 h-6 rounded-full bg-nls-gold border-2 border-white shadow-[0_0_20px_#D4AF37] animate-bounce"></div>
+                    </div>
                     <div class="order-1 w-full md:w-5/12 pl-12 md:pl-16 relative">
                         <div class="inline-block bg-nls-gold text-nls-black font-bold px-2 py-1 text-xs mb-2 rounded-sm">PRÓXIMAMENTE</div>
                         <h3 class="text-4xl font-gothic text-white mb-1">2026</h3>
